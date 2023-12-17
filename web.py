@@ -2,18 +2,27 @@ import streamlit as st
 from pydub import AudioSegment
 
 def main():
-    st.markdown("# <center>ỨNG DỤNG GIẢM NHIỄU VÀ ỒN</center>", unsafe_allow_html=True)
-    st.markdown("## <span style='color: #FF7F00;'><br>Thư viện Librosa</span>", unsafe_allow_html=True)
+    st.markdown("# <center>ỨNG DỤNG GIẢM NHIỄU VÀ ỒN<br></center>", unsafe_allow_html=True)
+    
 
     # Tên file âm thanh
-    input_audio_file = "./input/noise_reduction_input.wav"
-    output_audio_file = "./output/librosa_output.wav"
+    input_file = "./input/noise_reduction_input.wav"
+    librosa_output_file = "./output/librosa_output.wav"
+    spleeter_output_file = "./output/spleeter_output.wav"
 
+    # st.markdown("## <span style='color: #FF7F00;'><br>Âm thanh gốc</span>", unsafe_allow_html=True)
     # Đọc và hiển thị file âm thanh
-    st.subheader(f"Âm thanh gốc")
-    play_audio(input_audio_file)
+    st.markdown(f"### <span style='color: red;'><br>Âm thanh gốc</span>", unsafe_allow_html=True)
+    play_audio(input_file)
+
+    st.markdown("## <span style='color: #FF7F00;'>Librosa</span>", unsafe_allow_html=True)
+
     st.subheader(f"Âm thanh đã giảm nhiễu, ồn")
-    play_audio(output_audio_file)
+    play_audio(librosa_output_file)
+
+    st.markdown("## <span style='color: #FF7F00;'>Spleeter</span>", unsafe_allow_html=True)
+    st.subheader(f"Âm thanh đã giảm nhiễu, ồn")
+    play_audio(spleeter_output_file)
 
 def play_audio(audio_file):
     # Đọc file âm thanh
