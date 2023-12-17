@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import librosa
 import soundfile as sf
 import librosa.display
+from pydub import AudioSegment
 
 start_time = time.time()
 
