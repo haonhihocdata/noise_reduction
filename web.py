@@ -10,17 +10,16 @@ def main():
     librosa_output_file = "./output/librosa_output.wav"
     spleeter_output_file = "./output/spleeter_output.wav"
 
-    # st.markdown("## <span style='color: #FF7F00;'><br>Âm thanh gốc</span>", unsafe_allow_html=True)
     # Đọc và hiển thị file âm thanh
-    st.markdown(f"### <span style='color: red;'><br>Âm thanh gốc</span>", unsafe_allow_html=True)
+    st.markdown(f"### <br>ÂM THANH GỐC", unsafe_allow_html=True)
     play_audio(input_file)
 
-    st.markdown("## <span style='color: #FF7F00;'>Librosa</span>", unsafe_allow_html=True)
+    st.markdown("## <span style='color: #FF7F00;'>LIBROSA</span>", unsafe_allow_html=True)
 
     st.subheader(f"Âm thanh đã giảm nhiễu, ồn")
     play_audio(librosa_output_file)
 
-    st.markdown("## <span style='color: #FF7F00;'>Spleeter</span>", unsafe_allow_html=True)
+    st.markdown("## <span style='color: #FF7F00;'>SPLEETER </span>", unsafe_allow_html=True)
     st.subheader(f"Âm thanh đã giảm nhiễu, ồn")
     play_audio(spleeter_output_file)
 
